@@ -19,6 +19,9 @@ public class AnimalServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         request.setAttribute("animal", animal);
+		
+		RequestDispatcher dispatcher = request.getRequestDispatcher(VIEW);
+        dispatcher.forward(request, response);
     }
 
     @Override
@@ -29,8 +32,5 @@ public class AnimalServlet extends HttpServlet {
         animal.setAge(Integer.parseInt(request.getParameter("age")));
 
         System.out.format("\nName: %s\nBreed: %s\nGender: %s\nAge: %d\n", animal.getName(), animal.getBreed(), animal.getGender(), animal.getAge());
-
-        RequestDispatcher dispatcher = request.getRequestDispatcher(VIEW);
-        dispatcher.forward(request, response);
     }
 }
