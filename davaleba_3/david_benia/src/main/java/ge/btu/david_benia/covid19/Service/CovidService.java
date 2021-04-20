@@ -21,10 +21,12 @@ public class CovidService implements ServiceInterface {
         GetTotalData();
     }
 
+	@WebService
     public List<Covid> getStatistic(){
         return data;
     }
-
+	
+	@WebService
     public Covid CountryStatistic(String country){
         for(Covid obj : data){
             if(obj.getCountry().equals(country)){
@@ -33,17 +35,20 @@ public class CovidService implements ServiceInterface {
         }
         return null;
     }
-
+	
+	@WebService
     public int TotalConfirmed(){
 
         return total_numbers[1];
     }
 
+	@WebService
     public int TotalDeathget(){
 
         return total_numbers[0];
     }
 
+	@WebService
     public int TotalRecoveredget(){
 
         return total_numbers[3];
