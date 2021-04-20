@@ -51,7 +51,7 @@ public class CovidService implements ServiceInterface {
 	@WebService
     public int TotalRecoveredget(){
 
-        return total_numbers[3];
+        return total_numbers[2];
     }
 
     @Override
