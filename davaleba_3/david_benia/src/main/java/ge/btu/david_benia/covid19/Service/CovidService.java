@@ -11,7 +11,7 @@ public class CovidService implements ServiceInterface {
     Covid spain = new Covid("Spain", 200210, 166256, 635896);
     Covid italy = new Covid("Italy", 178972, 23660, 51003);
     public ArrayList<Covid> data = new ArrayList<>();
-    public int[] total_numbers = new int[2];
+    public int[] total_numbers = new int[3];
 
     public CovidService(){
         data.add(us);
